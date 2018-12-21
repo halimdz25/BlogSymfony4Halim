@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2>{{ article.title }}</h2>
+    <div class="metadata">Ecrit le{{ article.createdAt | date('d/m/Y') }} à {{ article.createdAt | date('H:i')}}</div>
+
+    <div class="content">
+        <img src="{{ article.image }}" alt="Photo">
+        {{ article.content | raw }}
+    </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, animi aperiam beatae blanditiis commodi cum dolores, doloribus eligendi enim eos est fuga, fugit ipsa itaque modi nam nesciunt non nostrum nulla obcaecati odio omnis optio porro quam quas sequi similique totam unde vel voluptate! Aut consequuntur et excepturi explicabo quidem?</p>
+{% endblock %}
